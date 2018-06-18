@@ -63,15 +63,4 @@ class UsersController extends Controller
         return view('users.show',$data);
     }
     
-     public function store(Request $request, $id)
-    {
-        \Auth::user()->follow($id);
-        return redirect()->back();
-    }
-
-    public function destroy($id)
-    {
-        \Auth::user()->unfollow($id);
-        return redirect()->back();
-    }
 }
