@@ -62,14 +62,14 @@ class UsersController extends Controller
 
         return view('users.show',$data);
     }
-    public function favorites($microposts_id)
+    public function favorites($id)
     {
-        $user = User::find($microposts_id);
+        $user = User::find($id);
         $favorites = $user->favorites()->paginate(10);
 
         $data = [
             'user' => $user,
-            'users' => $favorites,
+            'microposts' => $favorites,
         ];
 
         $data += $this->counts($user);
