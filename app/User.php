@@ -137,4 +137,3 @@ public function is_favoriting($microposts_id) {
 
 }
 }
-ｂ
