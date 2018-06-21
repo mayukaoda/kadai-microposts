@@ -57,7 +57,8 @@ class User extends Authenticatable
     if ($exist || $its_me) {
         // do nothing if already following
         return false;
-    } else {
+    } 
+else {
         // follow if not following
         $this->followings()->attach($userId);
         return true;
@@ -136,3 +137,4 @@ public function is_favoriting($microposts_id) {
 
 }
 }
+ｂ
